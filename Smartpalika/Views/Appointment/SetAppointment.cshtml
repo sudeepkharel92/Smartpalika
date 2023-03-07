@@ -1,0 +1,76 @@
+﻿@model smartpalika.Models.AppointmentUserDetails
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-7 mt-2">
+        <div class="card"> 
+            <div class="body p-2">
+                <h5 class="card-title pl-4 pt-4" id="exampleModalLabel">Book An Appointment</h5>
+                <div class="container ">
+
+                    <div class="modal-body">
+
+                        <form class="" method="post" asp-action="SetAppointment">
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="col bg-secondary text-light text-center py-2 rounded rounded-2"> <span><i class="fa fa-1x fa-calendar"></i> @Model.Date</span></div>
+
+
+                                </div>
+                                <div class="form-group col-md-6 rounded rounded-2" style="background: #e29578 ">
+                                    <div class="col text-light text-center py-2 rounded rounded-2"> <span id="time-slot"><i class="fa fa-1x fa-clock-o"></i>@Model.Time</span></div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <input asp-for="ID" type="text" class="form-control" hidden>
+                            </div>
+                            <div class="form-group">
+
+                                <input asp-for="priority" type="text" class="form-control" hidden>
+                            </div>
+
+                            <div class="form-group">
+
+                                <input asp-for="Date" type="text" class="form-control" hidden>
+                            </div>
+                            <div class="form-group">
+
+                                <input asp-for="Time" type="text" class="form-control" hidden>
+                            </div>
+                            <div class="form-group">
+
+                                <input asp-for="Provider" type="text" class="form-control" hidden>
+                            </div>
+                            <div class="form-group">
+
+                               
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="inputAddress2">Type</label>
+                                <select asp-for="ServiceType" class="form-group" required>
+                                    <option disabled selected >--Select--category--</option>
+                                    <option value="Birth Registration">Birth Registration</option>
+                                    <option value="Death Registration">Death Registration</option>
+                                    <option value="Marriage Registration">Marriage Registration</option>
+                                    <option value="Divorce Registration">Divorce Registration</option>
+                                    <option value="Migration">Migration</option>
+
+                                </select>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Confirm</button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
